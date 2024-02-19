@@ -19,6 +19,7 @@ int	ft_putstr(char *str)
 		write(1, "(null)", 6);
 		return (6);
 	}
-	write (1, str, ft_strlen(str));
+	if (write (1, str, ft_strlen(str)) == -1)
+		return (-1);
 	return (ft_strlen(str));
 }

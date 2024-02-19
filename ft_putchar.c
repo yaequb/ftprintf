@@ -6,7 +6,7 @@
 /*   By: ndesques <ndesques@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 15:45:57 by ndesques          #+#    #+#             */
-/*   Updated: 2024/01/16 16:15:08 by ndesques         ###   ########.fr       */
+/*   Updated: 2024/02/19 10:54:27 by ndesques         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int	ft_putchar(char c)
 {
-	write (1, &c, 1);
+	if (write (1, &c, 1) == -1)
+		return (-1);
 	return (1);
 }
